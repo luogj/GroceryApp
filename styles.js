@@ -50,6 +50,16 @@ var styles = StyleSheet.create({
   center: {
     textAlign: 'center',
   },
+  addItemForm: {
+    flexDirection: 'row',
+    alignItems: 'center'
+  },
+  addItemField: {
+    flex: 3,
+    backgroundColor: '#fff',
+    paddingLeft: 16,
+    paddingRight: 16,
+  },
   actionText: {
     color: '#fff',
     fontSize: 16,
@@ -59,7 +69,7 @@ var styles = StyleSheet.create({
     backgroundColor: constants.actionColor,
     borderColor: 'transparent',
     borderWidth: 1,
-    paddingLeft: 16,
+    flex: 1,
     paddingTop: 14,
     paddingBottom: 16,
   },
