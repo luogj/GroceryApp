@@ -8,6 +8,7 @@ const styles = require('./styles.js');
 
 const {
   AppRegistry,
+  Alert,
   ListView,
   TextInput,
   StyleSheet,
@@ -65,8 +66,20 @@ class GroceryApp extends Component {
   }
 
   renderItem(item) {
+    const onPress = () => {
+      Alert.alert(
+        'Complete',
+        null,
+        [
+          {text: 'Cancel', onPress: (text) => console.log('Cancel')},
+          {text: 'Confirm', onPress: (text) => this.itemsRef.child(item._key).remove()}
+        ],
+        'default'
+      );
+    };
+
     return (
-      <ListItem item={item} onPress="" />
+      <ListItem item={item} onPress={onPress} />
     );
   }
 
